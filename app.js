@@ -6,7 +6,7 @@ const global = require('./global')
 global.app.use(sessions({
   cookieName: 'auth',
   requestKey: 'auth',
-  secret: generate(),
+  secret: 'XwPp9xazJ0ku5CZnlmgAx2Dld8SHkAeT',
   duration: 24 * 60 * 60 * 1000,
 }))
 
