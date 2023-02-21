@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---->
+    <title>{{constants.author}}'s Gallery</title>
+    <!---->
+    <link rel="stylesheet" href="http://localhost:3000/styles/main.css">
+    <link rel="stylesheet" href="http://localhost:3000/styles/auth/auth.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <h1 class="title">{{constants.author}}'s Gallery</h1>
+    </header>
+    <!-- contents -->
+    <div class="contents-container">
+        <form class="auth-form" id="login" action="http://localhost:3000/auth/login" method="post">
+            <h2 class="title">Login information</h2>
+            <!-- information -->
+            <label class="auth-data-label" for="username">Username:</label>
+            <input class="auth-data input"  id="username" name="username" required>
+            <label class="auth-data-label" for="password">Password:</label>
+            <input class="auth-data input"  id="password" name="password" type="password" required>
+            <!-- errors -->
+            {{#if errors.invalidUsername}}
+                <p class="error">User isn't registered!</p>
+            {{/if}}
+            {{#if errors.invalidPassword}}
+                <p class="error">Invalid password!</p>
+            {{/if}}
+            <!-- submit button -->
+            <button class="button-filled button" type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>

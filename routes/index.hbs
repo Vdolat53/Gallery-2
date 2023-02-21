@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---->
+    <title>{{constants.author}}'s Gallery</title>
+    <!---->
+    <link rel="stylesheet" href="http://localhost:3000/styles/main.css">
+    <link rel="stylesheet" href="http://localhost:3000/styles/index.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <h1 class="title">{{constants.author}}'s Gallery</h1>
+    </header>
+    <!-- contents -->
+    <div class="contents-container">
+        <form action="http://localhost:3000/auth/logout" method="post">
+            <button class="button-filled user-logout" type="submit">
+                <span class="default">{{user.username}}</span>
+                <span class="hover">Logout?</span>
+            </button>
+        </form>
+        <form class="references-container" action="/" method="get">
+            <h2 class="title">Images</h2>
+            {{#each images}}
+            <div class="reference-container">
+                <input class="reference"        id="image-{{name}}" name="image" type="radio" value="{{value}}">
+                <label class="reference-label" for="image-{{name}}">{{name}}</label>
+            </div>
+            <div class="spacer"></div>
+            {{/each}}
+            <button class="button-filled" type="submit">Load</button>
+        </form>
+        <div class="image-container">
+            {{#with image}}
+            <img class="image" src="{{path}}" alt="NO IMAGE!">
+            <p   class="image-label">{{name}}</p>
+            {{/with}}
+        </div>
+    </div>
+</body>
+</html>
