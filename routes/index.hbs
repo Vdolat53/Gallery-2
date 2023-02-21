@@ -6,8 +6,8 @@
     <!---->
     <title>{{constants.author}}'s Gallery</title>
     <!---->
-    <link rel="stylesheet" href="http://localhost:3000/styles/main.css">
-    <link rel="stylesheet" href="http://localhost:3000/styles/index.css">
+    <link rel="stylesheet" href="https://vahid-gallery2.cyclic.app/styles/main.css">
+    <link rel="stylesheet" href="https://vahid-gallery2.cyclic.app/styles/index.css">
 </head>
 <body>
     <!-- header -->
@@ -16,13 +16,13 @@
     </header>
     <!-- contents -->
     <div class="contents-container">
-        <form action="http://localhost:3000/auth/logout" method="post">
+        <form action="https://vahid-gallery2.cyclic.app/auth/logout" method="post">
             <button class="button-filled user-logout" type="submit">
                 <span class="default">{{user.username}}</span>
                 <span class="hover">Logout?</span>
             </button>
         </form>
-        <form class="references-container" action="/" method="get">
+        <form class="references-container" action="https://vahid-gallery2.cyclic.app/" method="get">
             <h2 class="title">Images</h2>
             {{#each images}}
             <div class="reference-container">

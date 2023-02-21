@@ -1,6 +1,6 @@
 # [Gallery](https://vahid-gallery.cyclic.app)
 
-Assignment <u>**Lab – GitHub Cyclic**</u>
+Assignment <u>**Gallery 2 – GitHub Cyclic**</u>
 
 > ### ***Based on***
 > + Cyclic
